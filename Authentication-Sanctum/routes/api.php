@@ -31,4 +31,3 @@ Route::get('getInvoice/{invoice}', [InvoiceController::class, 'getInvoice']);
 Route::post('createInvoice', [InvoiceController::class, 'createInvoice']);
 Route::put('updateInvoice/{invoice}', [InvoiceController::class, 'updateInvoice']);
 
-

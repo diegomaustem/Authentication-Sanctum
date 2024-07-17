@@ -71,5 +71,6 @@ class InvoiceController extends Controller
         if($updated) {
             return $this->response('Invoice updated', 200, new InvoiceResource($invoice->load('user')));
         }
+        return $this->error('Invoice not updated', 400);
     }
 }
