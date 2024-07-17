@@ -12,9 +12,13 @@ class InvoiceController extends Controller
 {
     use HttpResponses;
 
-    public function getInvoices()
+    public function getInvoices(Request $request)
     {
-        return InvoiceResource::collection(Invoice::with('user')->get());
+        // return InvoiceResource::collection(Invoice::with('user')->get());
+
+        // Teste of filters
+        // return (new Invoice())
+
     }
 
     public function getInvoice(Invoice $invoice)
