@@ -73,4 +73,15 @@ class InvoiceController extends Controller
         }
         return $this->error('Invoice not updated', 400);
     }
+
+    public function deleteInvoice(Invoice $invoice)
+    {
+        $deleted = $invoice->delete();
+
+        if($deleted) {
+            return $this->response('Invoice deleted', 200);
+        }
+        return $this->error('Invoice not deleted', 400);
+
+    }
 }
