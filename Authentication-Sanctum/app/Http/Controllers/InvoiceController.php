@@ -10,7 +10,7 @@ class InvoiceController extends Controller
 {
     public function getInvoices()
     {
-        return InvoiceResource::collection(Invoice::all());
+        return InvoiceResource::collection(Invoice::with('user')->get());
     }
 
     public function getInvoice(Invoice $invoice)
