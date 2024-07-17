@@ -48,7 +48,7 @@ class InvoiceController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'user_id' => 'required',
-            'type' => 'required',
+            'type' => 'required|in:' . implode(',', ['Boleto','Pix','Cartao']),
             'paid' => 'required|numeric|between:0,1',
             'payment_date' => 'nullable|date_format:Y-m-d H:i:s',
             'value' => 'required|numeric'
