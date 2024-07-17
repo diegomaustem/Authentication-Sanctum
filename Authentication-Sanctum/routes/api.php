@@ -28,5 +28,6 @@ Route::get('getUser/{user}', [UserController::class, 'getUser']);
 
 Route::get('getInvoices', [InvoiceController::class, 'getInvoices']);
 Route::get('getInvoice/{invoice}', [InvoiceController::class, 'getInvoice']);
+Route::post('createInvoice', [InvoiceController::class, 'createInvoice']);
 
 
