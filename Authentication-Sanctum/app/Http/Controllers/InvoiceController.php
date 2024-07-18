@@ -14,11 +14,8 @@ class InvoiceController extends Controller
 
     public function getInvoices(Request $request)
     {
-        // return InvoiceResource::collection(Invoice::with('user')->get());
 
-        // Teste of filters
-        // return (new Invoice())
-
+        return InvoiceResource::collection(Invoice::with('user')->get());
     }
 
     public function getInvoice(Invoice $invoice)
